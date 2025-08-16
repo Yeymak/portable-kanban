@@ -194,8 +194,9 @@ export const Card = ({ card, onEnter, editable = true, isEdit = false }: Propert
             }}
             state={{ backgroundLocation: location }}
           >
+            <Title>{state.card.title}</Title>
             {sortedLabels.length > 0 && (
-              <Labels>
+              <Labels style={{ marginTop: '12px' }}>
                 {sortedLabels.map((l) => (
                   <Label key={l.id} style={{ backgroundColor: l.color }}>
                     {l.title}
@@ -203,7 +204,6 @@ export const Card = ({ card, onEnter, editable = true, isEdit = false }: Propert
                 ))}
               </Labels>
             )}
-            <Title>{state.card.title}</Title>
             <div
               style={{
                 display: 'flex',
@@ -255,8 +255,9 @@ export const Card = ({ card, onEnter, editable = true, isEdit = false }: Propert
         )
       ) : (
         <>
+          <Title>{state.card.title}</Title>
           {state.card.labels.length > 0 && (
-            <Labels>
+            <Labels style={{ marginTop: '12px' }}>
               {state.card.labels.map((l) => (
                 <Label key={l.id} style={{ backgroundColor: l.color }}>
                   {l.title}
@@ -264,7 +265,6 @@ export const Card = ({ card, onEnter, editable = true, isEdit = false }: Propert
               ))}
             </Labels>
           )}
-          <Title>{state.card.title}</Title>
         </>
       )}
     </Container>
